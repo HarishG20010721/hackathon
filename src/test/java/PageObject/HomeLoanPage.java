@@ -155,17 +155,24 @@ public class HomeLoanPage extends BasePage{
 	// Method to handle Advertisement
 	public void handleAdvertisement() throws InterruptedException {
 		
-		Thread.sleep(3000);
-		// first iframe
-		driver.switchTo().frame(firstIframeElement);
-		
-		// second iframe
-		driver.switchTo().frame(advertisementIframeElement);
-		
-		advertisementDismissButtonElement.click();
-		
-		driver.switchTo().defaultContent();
-		
+		try {
+			boolean res = firstIframeElement.isDisplayed();
+			
+			if(res) {
+				// first iframe
+				driver.switchTo().frame(firstIframeElement);
+				
+				// second iframe
+				driver.switchTo().frame(advertisementIframeElement);
+				
+				advertisementDismissButtonElement.click();
+				
+				driver.switchTo().defaultContent();
+			}
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 	}
 	
@@ -367,7 +374,7 @@ public class HomeLoanPage extends BasePage{
 				}
 				ExcelUtility.writeData("HomeLoanYearOnYearTable", i, j, data);
 				System.out.print(data+"\t");
-			}
+		}
 			System.out.println();
 		}
 		

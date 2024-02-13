@@ -15,10 +15,28 @@
     <classes>
       <class name="TestCases.LoanTenureCalculatorUICheck">
         <methods>
+          <include name="validateHomeInsurancePerYearRupeesButton"/>
+          <include name="validateHomeInsurancePerYearInputField"/>
+          <include name="validateDownPaymentInputFieldInPercentage"/>
+          <include name="validateLoanTenureMonthsButton"/>
           <include name="setUp"/>
-          <include name="homeLoanEmiCalculatorValidation"/>
+          <include name="validateLoanChargesRupeesButtonElement"/>
+          <include name="validateOneTimeExpensesInputField"/>
+          <include name="validateHomeValueInputfield"/>
           <include name="calculatorsDropDownValidation"/>
+          <include name="validateMaintenanceExpensesPerMonthInputField"/>
           <include name="printAllTheData"/>
+          <include name="validatePropertyTaxesPerYearInputField"/>
+          <include name="validateLoanInsuranceInputField"/>
+          <include name="validateInterestRateInputField"/>
+          <include name="validateOneTimeExpensesRupeesButton"/>
+          <include name="validateLoanChargesInputField"/>
+          <include name="validatePropertyTaxesPerYearRupeesButton"/>
+          <include name="validateDownPaymentRupeesButton"/>
+          <include name="homeLoanEmiCalculatorValidation"/>
+          <include name="validateLoanStartMonthAndYearInputField"/>
+          <include name="validateLoanStartMonthAndYearField"/>
+          <include name="validateLoanTenureInputField"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.LoanTenureCalculatorUICheck -->

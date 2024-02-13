@@ -26,14 +26,12 @@ public class BaseClass {
 	public static WebDriver driver;
 	public Properties properties;
 	public Logger logger;
-	public SoftAssert softAssert;
+
 	
 	@BeforeClass(groups = {"Master","Sanity","Regression"})
 	@Parameters({"os","browser"})
 	public void setUp(String os,String browser) throws IOException {
-		
-		// SoftAssert Object Creation 
-		softAssert = new SoftAssert();
+	
 		
 		// Config file setup
 		FileInputStream propertiesFile = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");

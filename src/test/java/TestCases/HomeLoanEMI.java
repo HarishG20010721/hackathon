@@ -34,23 +34,15 @@ public class HomeLoanEMI extends CarLoanEMI {
 		
 		logger.info("****** Starting TC_008 Home Loan Calculator Page ******");
 		
-		try {
-			homeLoanPage = new HomeLoanPage(driver);
-			
-			emiCalculatorPage.clickOnHomeLoanEmiCalculator();
-			
-//			homeLoanPage.handleAdvertisement();
-		}
-		catch (Exception e) {
-			// TODO: handle exception
-			homeLoanPage.handleAdvertisement();
-		}
-		finally {
-			
-			boolean result = homeLoanPage.validateHomeLoanEmiCalculator();
-			
-			Assert.assertEquals(true, result);
-		}
+		homeLoanPage = new HomeLoanPage(driver);
+		
+		emiCalculatorPage.clickOnHomeLoanEmiCalculator();
+		
+		homeLoanPage.handleAdvertisement();
+		
+		boolean result = homeLoanPage.validateHomeLoanEmiCalculator();
+		
+		Assert.assertEquals(true, result);
 		
 		logger.info("****** finished TC_008 Home Loan Calculator Page ******");
 	}
@@ -79,6 +71,7 @@ public class HomeLoanEMI extends CarLoanEMI {
 			}
 			e.printStackTrace();
 		} 
+		
 		Assert.assertEquals(homeValue, loanAmount);
 		
 		logger.info("****** finished TC_009 Home Value Input Field ******");

@@ -188,8 +188,6 @@ public class CalculateEmiUICheck extends EMICalculator {
 			}
 		}
 		
-		System.out.println(Arrays.deepToString(emiCalculatorData));
-		
 		return emiCalculatorData;	
 	}
 	
